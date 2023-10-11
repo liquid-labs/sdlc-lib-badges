@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/catalyst-lib-badges",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "A catalyst library with useful function for 'badge builders'.",
   "main": "dist/catalyst-lib-badges.js",
   "files": [
