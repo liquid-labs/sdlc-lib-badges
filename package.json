@@ -4,7 +4,8 @@
   "description": "A catalyst library with useful function for 'badge builders'.",
   "main": "dist/catalyst-lib-badges.js",
   "files": [
-    "dist/"
+    "dist/",
+    "README.md"
   ],
   "scripts": {
     "build": "make",
