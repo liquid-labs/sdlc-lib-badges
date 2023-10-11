@@ -1,7 +1,6 @@
 const extractBadgesLine = ({ catalystData = {} }) => {
   const badgeData = []
 
-  console.log('catalystData (extract-badge-line):', catalystData) // DEBUG
   processData({ data : catalystData, badgeData })
 
   const allBadgesLine = badgeData
@@ -15,10 +14,8 @@ const extractBadgesLine = ({ catalystData = {} }) => {
 
 const processData = ({ data, badgeData }) => {
   const { scripts } = data
-  console.log('data (extract-badge-line):', data) // DEBUG
 
   if (scripts !== undefined) {
-    console.log('scripts:', scripts) // DEBUG
     for (const script of scripts) {
       const { badgeLine, priority } = script
       if (badgeLine !== undefined && priority !== undefined) {

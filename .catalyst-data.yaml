@@ -62,3 +62,16 @@ workflows:
       config:
         noDevInstall: true
         noDoc: true
+badges:
+  coverage:
+    dependencies: []
+    scripts:
+      - builder: '@liquid-labs/catalyst-builder-badge-coverage'
+        version: 1.0.0-alpha.0
+        priority: 0
+        badgeLine: >-
+          [![coverage:
+          68%](./.readme-assets/coverage.svg)](https://github.com/liquid-labs/catalyst-lib-badges/pulls)
+        path: >-
+          /Users/zane/.liq/playground/liquid-labs/catalyst-lib-badges/.readme-assets/coverage.svg
+        purpose: Test coverage badge for README.md.

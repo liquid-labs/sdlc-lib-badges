@@ -1,10 +1,19 @@
 {
   "name": "@liquid-labs/catalyst-lib-badges",
   "version": "1.0.0-alpha.0",
-  "description": "",
+  "description": "A catalyst library with useful function for 'badge builders'.",
   "main": "dist/catalyst-lib-badges.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "test": "make test",
+    "prepack": "make build",
+    "preversion": "make test && make lint",
+    "qa": "make qa"
   },
   "engines": {
     "node": ">=18.0.0"

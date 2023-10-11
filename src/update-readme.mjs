@@ -10,7 +10,6 @@ import { extractBadgesLine } from './lib/extract-badges-line'
 const badgeLineRe = /^\s*\[!\[/
 
 const updateReadme = async({ pkgRoot, badgesLine }) => {
-  console.log('updateReadme...') // DEBUG
   const readmePath = fsPath.join(pkgRoot, 'README.md')
   let noReadme = false
   let readmeContents
@@ -18,21 +17,18 @@ const updateReadme = async({ pkgRoot, badgesLine }) => {
     readmeContents = await fs.readFile(readmePath, { encoding : 'utf8' })
   }
   catch (e) {
-    console.log(e.code) // DEBUG
     if (e.code === 'ENOENT') { // we're missing a README.md
       noReadme = true
-      console.log('handling...') // DEBUG
       // TODO: this might be useful in a library
       const pkgJSON = await getPackageJSON({ pkgDir : pkgRoot })
       const { basename } = await getPackageOrgAndBasename({ pkgJSON })
       const { description } = pkgJSON
       readmeContents = `# ${basename}\n`
       if (description !== undefined && description.trim().length > 0) {
-        readmeContents += '\n' + description
+        readmeContents += '\n' + description + '\n'
       }
     }
     else {
-      console.log('throwing...') // DEBUG
       throw e
     }
   }
@@ -51,7 +47,6 @@ const updateReadme = async({ pkgRoot, badgesLine }) => {
     }
 
     const catalystData = yaml.load(catalystDataContents)
-    console.log('catalystData:', catalystData) // DEBUG
     badgesLine = extractBadgesLine({ catalystData })
   }
 
