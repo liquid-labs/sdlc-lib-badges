@@ -5,7 +5,7 @@ const extractBadgesLine = ({ catalystData = {} }) => {
 
   const allBadgesLine = badgeData
     .sort((a, b) => a.priority > b.priority ? 1 : (a.priority < b.priority ? -1 : 0))
-    .map(({ badgeLine }) => badgeLine)
+    .map(({ content }) => content)
     .join(' ')
     .trim()
 
@@ -13,13 +13,13 @@ const extractBadgesLine = ({ catalystData = {} }) => {
 }
 
 const processData = ({ data, badgeData }) => {
-  const { scripts } = data
+  const { artifacts } = data
 
-  if (scripts !== undefined) {
-    for (const script of scripts) {
-      const { badgeLine, priority } = script
-      if (badgeLine !== undefined && priority !== undefined) {
-        badgeData.push({ badgeLine, priority })
+  if (artifacts !== undefined) {
+    for (const artifact of artifacts) {
+      const { content, priority } = artifact
+      if (content !== undefined && priority !== undefined) {
+        badgeData.push({ content, priority })
       }
     }
   }

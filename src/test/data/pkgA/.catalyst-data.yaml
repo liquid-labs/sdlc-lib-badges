@@ -1,11 +1,11 @@
 badges:
   coverage:
     dependencies: []
-    scripts:
+    artifacts:
       - builder: '@liquid-labs/catalyst-builder-badge-coverage'
         version: 1.0.0-alpha.0
         priority: 0
-        badgeLine: '[![coverage: 100%](./.readme-assets/coverage.svg)](https://google.com)'
+        content: '[![coverage: 100%](./.readme-assets/coverage.svg)](https://google.com)'
         path: >-
           /Users/zane/.liq/playground/liquid-labs/catalyst-lib-build/.readme-assets/coverage.svg
         purpose: Test coverage badge for README.md.
@@ -16,7 +16,7 @@ workflows:
         - '@liquid-labs/catalyst-resource-babel-and-rollup'
         - '@liquid-labs/catalyst-resource-eslint'
         - '@liquid-labs/catalyst-resource-jest'
-      scripts:
+      artifacts:
         - builder: '@liquid-labs/catalyst-builder-node'
           version: 1.0.0-alpha.0
           priority: 0
