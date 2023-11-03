@@ -1,0 +1,23 @@
+Test git rev: e4c5dbc5b32cd7789c3d552e37e63b1228a8f1fa
+PASS test/update-readme.test.js
+  updateReadme
+    ✓ inserts the badge line if not present (1 ms)
+    ✓ replaces the badge line if present (1 ms)
+    ✓ will read from .catalyst-data.yaml (3 ms)
+
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |   66.23 |    54.76 |      60 |   68.05 |                   
+ src                         |   57.62 |    54.83 |      50 |   59.25 |                   
+  common-parameters.mjs      |       0 |      100 |       0 |       0 | 1-7               
+  process-badge-builders.mjs |       0 |        0 |       0 |       0 | 1-24              
+  update-readme.mjs          |      85 |    73.91 |     100 |   84.21 | 28-32,44-45,67-68 
+ src/lib                     |   94.44 |    54.54 |      75 |   94.44 |                   
+  extract-badges-line.mjs    |   94.44 |    54.54 |      75 |   94.44 | 7                 
+-----------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.264 s, estimated 1 s
+Ran all test suites.
