@@ -34,20 +34,20 @@ const updateReadme = async({ pkgRoot, badgesLine }) => {
   }
 
   if (badgesLine === undefined) {
-    const catalystDataPath = fsPath.join(pkgRoot, '.catalyst-data.yaml')
-    let catalystDataContents
+    const sdlcDataPath = fsPath.join(pkgRoot, '.sdlc-data.yaml')
+    let sdlcDataContents
     // we'd love to do these sequentially, but that makes it hard to handle the case where both files are missing
     try {
-      catalystDataContents = await fs.readFile(catalystDataPath, { encoding : 'utf8' })
+      sdlcDataContents = await fs.readFile(sdlcDataPath, { encoding : 'utf8' })
     }
     catch (e) {
       if (e.code === 'ENOENT') {
-        catalystDataContents = '{}'
+        sdlcDataContents = '{}'
       }
     }
 
-    const catalystData = yaml.load(catalystDataContents)
-    badgesLine = extractBadgesLine({ catalystData })
+    const sdlcData = yaml.load(sdlcDataContents)
+    badgesLine = extractBadgesLine({ sdlcData })
   }
 
   if (badgesLine !== undefined && badgesLine.length > 0) {

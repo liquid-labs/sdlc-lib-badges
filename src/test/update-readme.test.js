@@ -27,7 +27,7 @@ describe('updateReadme', () => {
     expect(afterLines[1]).toBe(newBadgeLine)
   })
 
-  test('will read from .catalyst-data.yaml', async() => {
+  test('will read from .sdlc-data.yaml', async() => {
     const catylstDataBadgeLine = '[![coverage: 100%](./.readme-assets/coverage.svg)](https://google.com)'
     await updateReadme({ pkgRoot })
     const afterContents = await fs.readFile(readmePath, { encoding : 'utf8' })

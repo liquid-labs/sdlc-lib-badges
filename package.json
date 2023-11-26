@@ -1,8 +1,8 @@
 {
-  "name": "@liquid-labs/catalyst-lib-badges",
+  "name": "@liquid-labs/sdlc-lib-badges",
   "version": "1.0.0-alpha.3",
-  "description": "A catalyst library with useful function for 'badge builders'.",
-  "main": "dist/catalyst-lib-badges.js",
+  "description": "A library with useful function for SDLCPilot 'badge builders'.",
+  "main": "dist/sdlc-lib-badges.js",
   "files": [
     "dist/",
     "README.md"
@@ -22,11 +22,14 @@
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
-  "repository": "git+ssh://git@github.com/liquid-labs/catalyst-lib-badges.git",
-  "bugs": {
-    "url": "https://github.com/liquid-labs/catalyst-lib-badges/issues"
+  "repository": {
+    "url": "git+ssh://git@github.com/liquid-labs/sdlc-lib-badges.git",
+    "type": "git"
   },
-  "homepage": "https://github.com/liquid-labs/catalyst-lib-badges#readme",
+  "bugs": {
+    "url": "https://github.com/liquid-labs/sdlc-lib-badges/issues"
+  },
+  "homepage": "https://github.com/liquid-labs/sdlc-lib-badges#readme",
   "devDependencies": {
     "@liquid-labs/catalyst-resource-babel-and-rollup": "^1.0.0-alpha.3",
     "@liquid-labs/catalyst-resource-eslint": "^1.0.0-alpha.1",
