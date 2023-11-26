@@ -1,7 +1,7 @@
-const extractBadgesLine = ({ catalystData = {} }) => {
+const extractBadgesLine = ({ sdlcData = {} }) => {
   const badgeData = []
 
-  processData({ data : catalystData, badgeData })
+  processData({ data : sdlcData, badgeData })
 
   const allBadgesLine = badgeData
     .sort((a, b) => a.priority > b.priority ? 1 : (a.priority < b.priority ? -1 : 0))
