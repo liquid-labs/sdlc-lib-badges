@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/sdlc-lib-badges",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "A library with useful function for SDLCPilot 'badge builders'.",
   "main": "dist/sdlc-lib-badges.js",
   "files": [
