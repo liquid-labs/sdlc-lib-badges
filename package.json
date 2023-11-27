@@ -36,6 +36,6 @@
     "@liquid-labs/catalyst-resource-jest": "^1.0.0-alpha.3"
   },
   "dependencies": {
-    "@liquid-labs/npm-toolkit": "^1.0.0-alpha.10"
+    "@liquid-labs/npm-toolkit": "^1.0.0-alpha.17"
   }
 }
