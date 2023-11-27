@@ -1,0 +1,23 @@
+Test git rev: 2ff87d45fd0dda66987d2f6a05e0afe8516938fd
+PASS test/update-readme.test.js
+  updateReadme
+    ✓ inserts the badge line if not present (1 ms)
+    ✓ replaces the badge line if present
+    ✓ will read from .sdlc-data.yaml (3 ms)
+
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |   57.14 |    47.61 |      60 |   58.33 |                   
+ src                         |   45.76 |    45.16 |      50 |   46.29 |                   
+  common-parameters.mjs      |       0 |      100 |       0 |       0 | 1-7               
+  process-badge-builders.mjs |       0 |        0 |       0 |       0 | 1-24              
+  update-readme.mjs          |    67.5 |    60.86 |     100 |   65.78 | 20-32,44-45,67-68 
+ src/lib                     |   94.44 |    54.54 |      75 |   94.44 |                   
+  extract-badges-line.mjs    |   94.44 |    54.54 |      75 |   94.44 | 7                 
+-----------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.216 s, estimated 1 s
+Ran all test suites.
