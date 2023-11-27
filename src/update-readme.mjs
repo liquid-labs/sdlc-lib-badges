@@ -3,7 +3,7 @@ import * as fsPath from 'node:path'
 
 import yaml from 'js-yaml'
 
-import { getPackageJSON, getPackageOrgAndBasename } from '@liquid-labs/npm-toolkit'
+import { getPackageJSON, getPackageOrgBasenameAndVersion } from '@liquid-labs/npm-toolkit'
 
 import { extractBadgesLine } from './lib/extract-badges-line'
 
@@ -21,7 +21,7 @@ const updateReadme = async({ pkgRoot, badgesLine }) => {
       noReadme = true
       // TODO: this might be useful in a library
       const pkgJSON = await getPackageJSON({ pkgDir : pkgRoot })
-      const { basename } = await getPackageOrgAndBasename({ pkgJSON })
+      const { basename } = await getPackageOrgBasenameAndVersion({ pkgJSON })
       const { description } = pkgJSON
       readmeContents = `# ${basename}\n`
       if (description !== undefined && description.trim().length > 0) {
