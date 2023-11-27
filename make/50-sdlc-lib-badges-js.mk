@@ -5,7 +5,7 @@
 # build dist/catalyst-lib-badges.js
 #####
 
-CATALYST_CATALYST_LIB_BADGES_JS:=$(DIST)/catalyst-lib-badges.js
+CATALYST_CATALYST_LIB_BADGES_JS:=$(DIST)/sdlc-lib-badges.js
 CATALYST_CATALYST_LIB_BADGES_JS_ENTRY=$(SRC)/index.mjs
 BUILD_TARGETS+=$(CATALYST_CATALYST_LIB_BADGES_JS)
 
