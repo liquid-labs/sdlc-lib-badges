@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/sdlc-lib-badges",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "A library with useful function for SDLCPilot 'badge builders'.",
   "main": "dist/sdlc-lib-badges.js",
   "files": [
@@ -41,7 +41,9 @@
   },
   "_npm-check-plus": {
     "depcheck": {
-      "ignoreMatches": ["@liquid-labs/sdlc-resource-*"]
+      "ignoreMatches": [
+        "@liquid-labs/sdlc-resource-*"
+      ]
     }
   }
 }
